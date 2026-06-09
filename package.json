@@ -1,0 +1,21 @@
+{
+  "name": "search-dinamic-sheet-wromo",
+  "version": "1.0.0",
+  "description": "A universal search widget with Data from Sheets with CDN integration.",
+  "main": "index.js",
+  "unpkg": "sheet-search-wromo.js",
+  "jsdelivr": "sheet-search-wromo.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ghepes/search-dinamic-sheet-wromo.git"
+  },
+  "keywords": [
+    "search",
+    "product",
+    "widget",
+    "sheets",
+    "cdn"
+  ],
+  "author": "Ghepes",
+  "license": "MIT"
+}
