@@ -11,7 +11,11 @@
     pageUrl: 3,
     description: 4,
     price: 5,
-    keywords: 6
+    keywords: 6,
+    ratingStars: 7,
+    ratingText: 8,
+    ratingUser: 9,
+    infoAdvanced: 10
   };
   var INJECTED_STYLE = [
     ":root {",
@@ -96,6 +100,11 @@
     "  grid-template-columns: repeat(3, minmax(0, 1fr));",
     "  gap: 18px;",
     "}",
+    ".psw-card-link {",
+    "  text-decoration: none;",
+    "  display: block;",
+    "  color: inherit;",
+    "}",
     ".psw-card {",
     "  display: grid;",
     "  gap: 14px;",
@@ -106,6 +115,11 @@
     "  background: var(--psw-panel);",
     "  box-shadow: 0 16px 32px rgba(18, 45, 35, 0.08);",
     "  overflow: hidden;",
+    "  transition: transform 0.2s ease, box-shadow 0.2s ease;",
+    "}",
+    ".psw-card-link:hover .psw-card {",
+    "  transform: translateY(-4px);",
+    "  box-shadow: 0 24px 48px rgba(18, 45, 35, 0.12);",
     "}",
     ".psw-card-media {",
     "  aspect-ratio: 16 / 11;",
@@ -154,6 +168,11 @@
     "  color: var(--psw-ink);",
     "  font: 700 1rem/1 'Trebuchet MS', 'Segoe UI', sans-serif;",
     "}",
+    ".psw-stars {",
+    "  color: #f59e0b;",
+    "  font-size: 0.95rem;",
+    "  letter-spacing: 2px;",
+    "}",
     ".psw-link {",
     "  display: inline-flex;",
     "  align-items: center;",
@@ -165,16 +184,6 @@
     "  color: #fff;",
     "  text-decoration: none;",
     "  font: 700 0.9rem/1 'Trebuchet MS', 'Segoe UI', sans-serif;",
-    "}",
-    ".psw-empty {",
-    "  padding: 24px;",
-    "  border: 1px dashed rgba(22, 49, 38, 0.16);",
-    "  border-radius: 24px;",
-    "  text-align: center;",
-    "  color: var(--psw-muted);",
-    "  background: rgba(255, 255, 255, 0.56);",
-    "  font: 400 1rem/1.6 Georgia, 'Times New Roman', serif;",
-    "}",
     ".psw-reviews {",
     "  display: grid;",
     "  gap: 4px;",
@@ -187,6 +196,9 @@
     "  font-size: 0.95rem;",
     "  letter-spacing: 2px;",
     "}",
+    "  .psw-link {",
+    "    width: 100%;",
+    "  }",
     ".psw-review-text {",
     "  font: 400 0.85rem/1.4 Georgia, 'Times New Roman', serif;",
     "  color: var(--psw-muted);",
@@ -196,6 +208,15 @@
     "  font: 700 0.8rem/1 'Trebuchet MS', 'Segoe UI', sans-serif;",
     "  color: var(--psw-ink);",
     "  text-align: right;",
+    "}",
+    ".psw-empty {",
+    "  padding: 24px;",
+    "  border: 1px dashed rgba(22, 49, 38, 0.16);",
+    "  border-radius: 24px;",
+    "  text-align: center;",
+    "  color: var(--psw-muted);",
+    "  background: rgba(255, 255, 255, 0.56);",
+    "  font: 400 1rem/1.6 Georgia, 'Times New Roman', serif;",
     "}",
     "@media (max-width: 768px) {",
     "  .psw-grid {",
@@ -218,9 +239,6 @@
     "  .psw-card-footer {",
     "    align-items: stretch;",
     "    flex-direction: column;",
-    "  }",
-    "  .psw-link {",
-    "    width: 100%;",
     "  }",
     "}",
     ""
@@ -537,42 +555,35 @@
 
     grid.innerHTML = items
       .map(function mapProduct(product) {
-        var reviewHtml = "";
+        var displayStars = product.ratingStars;
+        var num = parseInt(product.ratingStars, 10);
         
-        if (product.ratingStars || product.ratingText) {
-          reviewHtml = 
-            '    <div class="psw-reviews">' +
-            '      <div class="psw-stars">' + escapeHtml(product.ratingStars) + '</div>' +
-            '      <div class="psw-review-text">"' + escapeHtml(product.ratingText) + '"</div>' +
-            '      <div class="psw-review-user">- ' + escapeHtml(product.ratingUser) + '</div>' +
-            '    </div>';
+        // Dacă valoarea din tabel este o cifră, o transformăm în stele vizuale
+        if (!isNaN(num)) {
+          displayStars = "";
+          for (var i = 1; i <= 5; i++) {
+            displayStars += i <= num ? "★" : "☆";
+          }
         }
+        
+        var starsHtml = displayStars ? '<span class="psw-stars">' + escapeHtml(displayStars) + '</span>' : '';
+        
         return (
-          '<article class="psw-card" role="listitem">' +
-          '  <div class="psw-card-media">' +
-          '    <img src="' +
-          escapeHtml(product.imageUrl) +
-          '" alt="' +
-          escapeHtml(product.title) +
-          '">' +
-          "  </div>" +
-          '  <div class="psw-card-body">' +
-          '    <h3 class="psw-card-title">' +
-          escapeHtml(product.title) +
-          "</h3>" +
-          '    <p class="psw-card-desc">' +
-          escapeHtml(product.description) +
-          "</p>" +
-          '    <div class="psw-card-footer">' +
-          '      <span class="psw-price">' +
-          escapeHtml(product.price) +
-          "</span>" +
-          '      <a class="psw-link" href="' +
-          escapeHtml(product.pageUrl) +
-          '">Open product</a>' +
-          "    </div>" +
-          "  </div>" +
-          "</article>"
+          '<a class="psw-card-link" href="' + escapeHtml(product.pageUrl) + '">' +
+          '  <article class="psw-card" role="listitem">' +
+          '    <div class="psw-card-media">' +
+          '      <img src="' + escapeHtml(product.imageUrl) + '" alt="' + escapeHtml(product.title) + '">' +
+          '    </div>' +
+          '    <div class="psw-card-body">' +
+          '      <h3 class="psw-card-title">' + escapeHtml(product.title) + '</h3>' +
+          '      <p class="psw-card-desc">' + escapeHtml(product.description) + '</p>' +
+          '      <div class="psw-card-footer">' +
+          '        <span class="psw-price">' + escapeHtml(product.price) + '</span>' +
+                   starsHtml +
+          '      </div>' +
+          '    </div>' +
+          '  </article>' +
+          '</a>'
         );
       })
       .join("");

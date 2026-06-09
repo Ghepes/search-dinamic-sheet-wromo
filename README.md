@@ -2,12 +2,28 @@
 Search bar data Website from Spreadsheet Google Only with url ID from Spreadsheet
 
 
-## v.1.0.2
-Or added data points (Rating & Single page info product): 
+
+## v1.0.3
+
+In version v1.0.3, the star list view data sheet was added to the search bar and other pages.
+Removing the button, and clicking on the entire product portion to reach the single product page.
+
+![v1.0.3](/img/image-3.png)
+Add the possibility of requesting data for the shop page or single product page: infoAdvanced ID is exactly for advanced details on the single page where it is attached under the product as advanced details and you can add a simple info text or an html URL where the advanced data with images and explanations about a product listed.
+
+---
+
+## v1.0.2
+Added data points (Rating & Single page info product): 
+
 ratingStars: 7, // Column H 
+
 ratingText: 8, // Column I 
+
 ratingUser: 9, // Column J 
+
 infoAdvanced: 10 // Column K
+
 
 ---
 
@@ -46,7 +62,7 @@ npm i search-dinamic-sheet-wromo
 
 
 
-![Spreadsheet google products](/img/image-2.png)
+![Spreadsheet google products](/img/image-4.png)
 
 ## example product sheet:
 ````
@@ -85,6 +101,7 @@ keywords
 ## Use cdn url with SRI "integrity" id format:
 ````
 ## Version 1.0.0 
+````
 ````
 <script 
   src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.0/sheet-search-wromo.js" 
