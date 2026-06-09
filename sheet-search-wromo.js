@@ -175,6 +175,28 @@
     "  background: rgba(255, 255, 255, 0.56);",
     "  font: 400 1rem/1.6 Georgia, 'Times New Roman', serif;",
     "}",
+    ".psw-reviews {",
+    "  display: grid;",
+    "  gap: 4px;",
+    "  margin-top: 6px;",
+    "  padding-top: 10px;",
+    "  border-top: 1px dashed var(--psw-line);",
+    "}",
+    ".psw-stars {",
+    "  color: #f59e0b;",
+    "  font-size: 0.95rem;",
+    "  letter-spacing: 2px;",
+    "}",
+    ".psw-review-text {",
+    "  font: 400 0.85rem/1.4 Georgia, 'Times New Roman', serif;",
+    "  color: var(--psw-muted);",
+    "  font-style: italic;",
+    "}",
+    ".psw-review-user {",
+    "  font: 700 0.8rem/1 'Trebuchet MS', 'Segoe UI', sans-serif;",
+    "  color: var(--psw-ink);",
+    "  text-align: right;",
+    "}",
     "@media (max-width: 768px) {",
     "  .psw-grid {",
     "    grid-template-columns: repeat(2, minmax(0, 1fr));",
@@ -367,7 +389,11 @@
       price: normalizePrice(source.price),
       keywords: Array.isArray(source.keywords)
         ? source.keywords.map(normalizeText).filter(Boolean)
-        : []
+        : [],
+      ratingStars: normalizeText(source.ratingStars),
+      ratingText: normalizeText(source.ratingText),
+      ratingUser: normalizeText(source.ratingUser),
+      infoAdvanced: normalizeText(source.infoAdvanced)
     };
   }
 
@@ -390,7 +416,11 @@
             pageUrl: cellToString(cells[mapping.pageUrl]),
             description: cellToString(cells[mapping.description]),
             price: cellToString(cells[mapping.price]),
-            keywords: parseKeywords(cellToString(cells[mapping.keywords]))
+            keywords: parseKeywords(cellToString(cells[mapping.keywords])),
+            ratingStars: cellToString(cells[mapping.ratingStars]),
+            ratingText: cellToString(cells[mapping.ratingText]),
+            ratingUser: cellToString(cells[mapping.ratingUser]),
+            infoAdvanced: cellToString(cells[mapping.infoAdvanced])
           },
           "product-" + (index + 1)
         );
@@ -507,6 +537,16 @@
 
     grid.innerHTML = items
       .map(function mapProduct(product) {
+        var reviewHtml = "";
+        
+        if (product.ratingStars || product.ratingText) {
+          reviewHtml = 
+            '    <div class="psw-reviews">' +
+            '      <div class="psw-stars">' + escapeHtml(product.ratingStars) + '</div>' +
+            '      <div class="psw-review-text">"' + escapeHtml(product.ratingText) + '"</div>' +
+            '      <div class="psw-review-user">- ' + escapeHtml(product.ratingUser) + '</div>' +
+            '    </div>';
+        }
         return (
           '<article class="psw-card" role="listitem">' +
           '  <div class="psw-card-media">' +

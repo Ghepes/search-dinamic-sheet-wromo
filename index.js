@@ -3,12 +3,12 @@ import './sheet-search-wromo.js';
 
 // 1. We allow use as NPM modules
 export const init = (options) => {
-    if (typeof window !== 'undefined' && window.ProductSearchWidget) {
+    if (typeof window !== 'undefined' && window.SheetProductSearchWidget && typeof window.SheetProductSearchWidget.mount === 'function') {
         // The settings (options) to your mount function
-        return window.ProductSearchWidget.mount(options);
+        return window.SheetProductSearchWidget.mount(options);
     }
 };
 
 // 2. Export the object for default import
-const widget = typeof window !== 'undefined' ? window.ProductSearchWidget : null;
+const widget = typeof window !== 'undefined' ? window.SheetProductSearchWidget : null;
 export default widget;

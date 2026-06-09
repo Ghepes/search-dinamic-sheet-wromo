@@ -2,7 +2,14 @@
 Search bar data Website from Spreadsheet Google Only with url ID from Spreadsheet
 
 
+## v.1.0.2
+Or added data points (Rating & Single page info product): 
+ratingStars: 7, // Column H 
+ratingText: 8, // Column I 
+ratingUser: 9, // Column J 
+infoAdvanced: 10 // Column K
 
+---
 
 ![Style search bar for your website](/img/image.png)
 ![Mobile Style search bar for your website](/img/image-1.png)
