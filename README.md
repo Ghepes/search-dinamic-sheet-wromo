@@ -2,6 +2,32 @@
 Search bar data Website from Spreadsheet Google Only with url ID from Spreadsheet
 
 
+## v1.0.4
+z improvement - depends on the theme, the div can be placed as desired - body or header:
+````
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        
+        <div
+	  style="position: relative; z-index: 99999;"
+      data-product-search-sheet
+      data-product-search-sheet-id="YOUR_SHEET_ID"
+      data-product-search-sheet-name="Sheet1"
+      data-product-search-map="web"
+      data-product-search-placeholder="Search the sheet catalog..."
+      data-product-search-min-chars="3"
+      data-product-search-limit="8">
+    </div>
+
+      </div>
+    </div>
+  </div>
+````
+![alt text](/img/image-5.png)
+![alt text](/img/image-6.png)
+
+
 
 ## v1.0.3
 
