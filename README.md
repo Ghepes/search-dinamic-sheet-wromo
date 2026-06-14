@@ -24,8 +24,20 @@ z improvement - depends on the theme, the div can be placed as desired - body or
     </div>
   </div>
 ````
-![alt text](/img/image-5.png)
-![alt text](/img/image-6.png)
+Body v1.0.4
+## Version 1.0.0 
+````
+````
+<script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.4/maps.js"></script>
+<script 
+  src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.4/sheet-search-wromo.js" 
+  integrity="sha512-[HASH_NEW_GENERATED_HERE]"
+  crossorigin="anonymous" defer>
+</script>
+````
+---
+![v1.0.4](/img/image-5.png)
+![v1.0.4](/img/image-6.png)
 
 
 
@@ -138,6 +150,12 @@ keywords
 ---
 
 Good luck with the sheet search bar!
+
+
+
+Original example Sheet:
+
+
 
 By Wromo
 Iulian Ghepes
