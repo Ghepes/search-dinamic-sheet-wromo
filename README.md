@@ -25,8 +25,8 @@ z improvement - depends on the theme, the div can be placed as desired - body or
   </div>
 ````
 Body v1.0.4
-## Version 1.0.0 
-````
+
+
 ````
 <script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.4/maps.js"></script>
 <script 
@@ -38,6 +38,8 @@ Body v1.0.4
 ---
 ![v1.0.4](/img/image-5.png)
 ![v1.0.4](/img/image-6.png)
+General access "Anyone with the link"
+![Sheet public Link](/img/image-7.png)
 
 
 
