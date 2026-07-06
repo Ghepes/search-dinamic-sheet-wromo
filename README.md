@@ -2,8 +2,112 @@
 Search bar data Website from Spreadsheet Google Only with url ID from Spreadsheet
 
 
-## v1.0.4
-z improvement - depends on the theme, the div can be placed as desired - body or header:
+## v1.0.5 ##
+Each new version is different: use the version that suits yor team.
+What's coming in v1.0.5 : Besides a new search bar design connected with Google sheet, we added shop page products with dynamic pagination, and blog page + single blog page on click. it is still in its early stages and is not yet complete but each version will get closer to completion.
+
+# Each version will bring new improvements. The direction of Studio Wromo for dynamic html saas design: for json data formats.
+Each new piece in this design pyramid will bring huge value over time.
+Our models do not need packages that can change or the next day bring errors, and are static models dynamically packaged that serve forever.
+
+## For excellent security I suggest to add the SRI integrity code:
+## For example, you search for it through https://registry.npmjs.org/sheet-search-wromo : the correct "integrity hash" according to the version
+````
+<script 
+  src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.5/sheet-search-wromo.min.js" 
+  integrity="sha512-[HASH_GENERATED_HERE]" 
+  crossorigin="anonymous" defer>
+</script>
+````
+
+## Installation
+* ## dynamic CDN installation:
+
+* ## For ALL HEAD WEBPAGE 
+````
+
+		  <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.5/wromo-assets-injector-sheet.js"></script>
+</head>
+<body>
+
+````
+
+* ## For BODY SEARCH WEBPAGE 
+
+
+````
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        
+<div
+	  style="position: relative; z-index: 99999;"
+      data-product-search-sheet
+      data-product-search-sheet-id="1StUxxxxxxxxxxx-IUaB8l_uPPhs, 1AUsTBP9VfYBosxxxxxxxxxxxxxTrRucpC29LkU"
+      data-product-search-sheet-name="Sheet1"
+      data-product-search-map="web"
+      data-product-search-placeholder="Search the sheet catalog..."
+      data-product-search-min-chars="3"
+      data-product-search-limit="40">
+    </div>
+
+      </div>
+    </div>
+  </div>
+
+````
+
+* ## For BODY PRODUCTS WEBPAGE 
+
+````
+
+<section style="padding: 60px 0; background-color: #f8f9fa; min-height: 80vh;">
+  <div class="container">
+    
+    <div
+      data-product-shop-grid
+      data-product-search-sheet-id="1StUxxxxxxxxxxx-IUaB8l_uPPhs, 1AUsTBP9VfYBosxxxxxxxxxxxxxTrRucpC29LkU"
+      data-product-search-sheet-name="Tabell1"
+      data-product-search-map="web"
+      data-product-shop-limit="12">
+    </div>
+
+  </div>
+</section>
+
+````
+
+* ## For BODY BLOG WEBPAGE 
+
+````
+<div
+      data-blog-grid
+      data-blog-sheet-id="1StUxxxxxxxxxxx-IUaB8l_uPPhs, 1AUsTBP9VfYBosxxxxxxxxxxxxxTrRucpC29LkU"
+      data-blog-sheet-name="Date_Publice, Date_Private"
+      data-blog-map="blog"
+      data-blog-limit="8">
+</div>
+
+````
+* ## For END BODY SCRIPT JS + MAPS
+
+````
+<script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.5/maps.js"></script> // <!-- maps.js for Shop / mapsblog.js blog -->
+<script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.5/js/sheet-search-wromo.min.js" defer></script>
+
+</body>
+````
+![v1.0.5 Shop + Search](/img/image-9.png)
+![v1.0.5 Blog + Search + Single page](/img/image-8.png)
+
+
+
+## v1.0.4 ##
+ improvement - depends on the theme, the div can be placed as desired - body or header:
 ````
 <div class="container">
     <div class="row justify-content-center">
@@ -24,7 +128,8 @@ z improvement - depends on the theme, the div can be placed as desired - body or
     </div>
   </div>
 ````
-Body v1.0.4
+
+ ## Body v1.0.4
 
 
 ````
