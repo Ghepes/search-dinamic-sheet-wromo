@@ -10,15 +10,15 @@
 */
 @font-face {
   font-family: "remixicon";
-  src: url('../../fonts/remix-icon/remixicon.eot?t=1718271040674');
+  src: url('../fonts/remix-icon/remixicon.eot?t=1718271040674');
   /* IE9*/
-  src: url('../../fonts/remix-icon/remixicon.eot?t=1718271040674#iefix') format('embedded-opentype'),
+  src: url('../fonts/remix-icon/remixicon.eot?t=1718271040674#iefix') format('embedded-opentype'),
     /* IE6-IE8 */
-    url("../../fonts/remix-icon/remixicon.woff2?t=1718271040674") format("woff2"),
-    url("../../fonts/remix-icon/remixicon.woff?t=1718271040674") format("woff"),
-    url('../../fonts/remix-icon/remixicon.ttf?t=1718271040674') format('truetype'),
+    url("../fonts/remix-icon/remixicon.woff2?t=1718271040674") format("woff2"),
+    url("../fonts/remix-icon/remixicon.woff?t=1718271040674") format("woff"),
+    url('../fonts/remix-icon/remixicon.ttf?t=1718271040674') format('truetype'),
     /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-    url('../../fonts/remix-icon/remixicon.svg?t=1718271040674#remixicon') format('svg');
+    url('../fonts/remix-icon/remixicon.svg?t=1718271040674#remixicon') format('svg');
   /* iOS 4.1- */
   font-display: swap;
 }
