@@ -1,6 +1,6 @@
 {
   "name": "search-dinamic-sheet-wromo",
-  "version": "1.0.5",
+  "version": "1.0.9",
   "description": "A universal saas widget with Data from Sheets delivered via CDN integration.",
   "main": "index.js",
   "unpkg": "index.js",

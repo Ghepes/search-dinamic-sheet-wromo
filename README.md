@@ -2,9 +2,9 @@
 Search bar data Website from Spreadsheet Google Only with url ID from Spreadsheet
 
 
-## v1.0.5 ##
+## v1.0.9 ##
 Each new version is different: use the version that suits yor team.
-What's coming in v1.0.5 : Besides a new search bar design connected with Google sheet, we added shop page products with dynamic pagination, and blog page + single blog page on click. it is still in its early stages and is not yet complete but each version will get closer to completion.
+What's coming in v1.0.9 : Besides a new search bar design connected with Google sheet, we added shop page products with dynamic pagination, and blog page + single blog page on click. it is still in its early stages and is not yet complete but each version will get closer to completion.
 
 # Each version will bring new improvements. The direction of Studio Wromo for dynamic html saas design: for json data formats.
 Each new piece in this design pyramid will bring huge value over time.
@@ -14,8 +14,8 @@ Our models do not need packages that can change or the next day bring errors, an
 ## For example, you search for it through https://registry.npmjs.org/sheet-search-wromo : the correct "integrity hash" according to the version
 ````
 <script 
-  src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.5/sheet-search-wromo.min.js" 
-  integrity="sha512-[HASH_GENERATED_HERE]" 
+  src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.7/wromo-assets-injector-sheet.js" 
+  integrity="sha512-ibkZQQ3DGVDGnDhgsrCMZoi1WTRy7KfDvIvKy4t24zpfmO7GpnffzpAhuMo8D32qdDjhWcjI2Z2cwX2Q1XikLw==" 
   crossorigin="anonymous" defer>
 </script>
 ````
@@ -29,7 +29,7 @@ Our models do not need packages that can change or the next day bring errors, an
 		  <!--Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-      <script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.5/wromo-assets-injector-sheet.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.9/wromo-assets-injector-sheet.js"></script>
 </head>
 <body>
 
@@ -93,16 +93,24 @@ Our models do not need packages that can change or the next day bring errors, an
 </div>
 
 ````
-* ## For END BODY SCRIPT JS + MAPS
+* ## For END BODY SCRIPT JS + MAPS = PRODUCTS
 
 ````
-<script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.5/maps.js"></script> // <!-- maps.js for Shop / mapsblog.js blog -->
-<script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.5/js/sheet-search-wromo.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.9/maps.js"></script> // <!-- maps.js for Shop / mapsblog.js blog -->
+<script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.9/js/sheet-search-wromo.js" defer></script>
 
 </body>
 ````
-![v1.0.5 Shop + Search](/img/image-9.png)
-![v1.0.5 Blog + Search + Single page](/img/image-8.png)
+* ## For END BODY SCRIPT JS + MAPS = BLOG
+
+````
+ <script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.9/mapsblog.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.9/wromo-blog-widgets.js" defer></script>
+
+</body>
+````
+![v1.0.9 Shop + Search](/img/image-9.png)
+![v1.0.9 Blog + Search + Single page](/img/image-8.png)
 
 
 
