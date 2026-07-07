@@ -1,5 +1,5 @@
 (function injectWromoAssets() {
-    const baseUrl = "https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.9";
+    const baseUrl = "https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.1.0";
 
     // 1. Function to inject CSS/Fonts into
     function injectHeadResources() {

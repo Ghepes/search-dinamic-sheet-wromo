@@ -2,7 +2,7 @@
 // index.js - NPM Entry Point (Hibrid Node/CDN)
 // ==========================================
 (function initWromoPackage() {
-    const baseUrl = "https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.0.9";
+    const baseUrl = "https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.1.0";
 
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
         // Node.js environment / Module installed via terminal (npm install)
