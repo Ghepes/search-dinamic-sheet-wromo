@@ -6,7 +6,6 @@
         const resources = [
             { tag: 'link', rel: 'stylesheet', href: `${baseUrl}/css/font-awesome.css` },
             { tag: 'link', rel: 'stylesheet', href: `${baseUrl}/css/remixicon.css` },
-            { tag: 'link', rel: 'stylesheet', href: `${baseUrl}/fonts/remixicon.woff2` },
             { tag: 'link', rel: 'stylesheet', href: `${baseUrl}/css/bootstrap.css` },
             { tag: 'link', rel: 'stylesheet', href: `${baseUrl}/css/style.css` }
         ];
