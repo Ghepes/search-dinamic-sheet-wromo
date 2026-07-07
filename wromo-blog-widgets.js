@@ -101,7 +101,7 @@
     });
   }
 
-  // Downloading and saving blogs to local storage
+  // Downloading and saving blogs to local cloudx-bricks-prod-bucket
   async function loadBlogsFromSheet(options) {
     var source = { sheetId: options.sheetId, sheetName: options.sheetName };
     if (!normalizeText(source.sheetId)) throw new Error("Blog requires sheetId.");
