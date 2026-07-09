@@ -82,16 +82,28 @@ Our models do not need packages that can change or the next day bring errors, an
 ````
 
 * ## For BODY BLOG WEBPAGE 
+
+BLOG - located in the /blog/index.html Folder
+
 SHEET MAPS:
       Id: 0, // Column A
+
       Title: 1, // Column B
+
       Summary: 2, // Column C
+
       Full_description: 3, // Column D
+
       Source: 4, // Column E
+
       Media_url: 5, // Column F
+
       Date: 6, // Column G
+
       Url_single_page: 7, // Column H      <!-- title-blog-exemple  -->
+
       Author: 8, // Column I
+
 
 ````
 <div
@@ -104,15 +116,19 @@ SHEET MAPS:
 
 ````
 
+SINGLE PAGE image
+
 * ## For BODY BLOG - SINGLE BLOG PAGE
-Important: the single page is located in the /single/ folder and enter the following in index.html
+
+Important: the single page is located in the /blog/single/index.html folder and enter the following in index.html
+
 ````
 <section style="padding: 60px 0; background-color: #f8f9fa; min-height: 80vh;">
   <div class="container">
     
     <div
       data-blog-single
-      data-blog-sheet-id="1StUxxxxxxxxxxx-IUaB8l_uPPhs, 1AUsTBP9VfYBosxxxxxxxxxxxxxTrRucpC29LkU, 13KqImbDxxxxxxxxxxxxxxx-GXZzxrm-sIICC5ZE"
+      data-blog-sheet-id="1StUxxxxxxxxxxx-IUaB8l_uPPhs, 1AUsTBP9VfYBosxxxxxxxxxxxxxTrRucpC29LkU"
       data-blog-sheet-name="Date_Publice, Date_Private"
       data-blog-map="blog">
     </div>
