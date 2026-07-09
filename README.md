@@ -137,6 +137,12 @@ Important: the single page is located in the /blog/single/index.html folder and 
 </section>
 
 ````
+IMAGE SINGLE BLOG PAGE 
+![IMAGE SINGLE BLOG PAGE ](/img/image-10.png)
+
+
+
+Next to end body for blog or products:
 
 * ## For END BODY SCRIPT JS + MAPS = PRODUCTS
 
