@@ -114,7 +114,7 @@ Important: the single page is located in the /single/ folder and enter the follo
       data-blog-single
       data-blog-sheet-id="1StUxxxxxxxxxxx-IUaB8l_uPPhs, 1AUsTBP9VfYBosxxxxxxxxxxxxxTrRucpC29LkU, 13KqImbDxxxxxxxxxxxxxxx-GXZzxrm-sIICC5ZE"
       data-blog-sheet-name="Date_Publice, Date_Private"
-      data-blog-map="blog"
+      data-blog-map="blog">
     </div>
 
   </div>
