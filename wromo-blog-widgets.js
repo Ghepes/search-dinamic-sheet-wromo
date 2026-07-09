@@ -166,7 +166,7 @@
 
     var grid = target.querySelector(".wromo-blog-grid");
     var pagination = target.querySelector(".wromo-blog-pagination");
-
+    
     return loadBlogsFromSheet(options).then(function (blogs) {
       function renderPage(page) {
         var totalPages = Math.ceil(blogs.length / limit);
@@ -178,7 +178,7 @@
         var currentBlogs = blogs.slice(start, start + limit);
 
         grid.innerHTML = currentBlogs.map(function(blog) {
-          var singleLink = 'demo-2-blog.html?article=' + encodeURIComponent(blog.urlSlug || blog.id);
+          var singleLink = '?article=' + encodeURIComponent(blog.urlSlug || blog.id);
           return (
             '<div class="col-sm-6 col-xxl-4">' +
             '  <div class="blog-box sticky-blog-box">' +
