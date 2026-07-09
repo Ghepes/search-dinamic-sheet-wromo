@@ -2,9 +2,9 @@
 Search bar data Website from Spreadsheet Google Only with url ID from Spreadsheet
 
 
-## v1.1.1 ##
+## v1.1.2 ##
 Each new version is different: use the version that suits yor team.
-What's coming in v1.1.1 : Besides a new search bar design connected with Google sheet, we added shop page products with dynamic pagination, and blog page + single blog page on click. it is still in its early stages and is not yet complete but each version will get closer to completion.
+What's coming in v1.1.2 : Besides a new search bar design connected with Google sheet, we added shop page products with dynamic pagination, and blog page + single blog page on click. it is still in its early stages and is not yet complete but each version will get closer to completion.
 
 # Each version will bring new improvements. The direction of Studio Wromo for dynamic html saas design: for json data formats.
 Each new piece in this design pyramid will bring huge value over time.
@@ -29,7 +29,7 @@ Our models do not need packages that can change or the next day bring errors, an
 		  <!--Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-      <script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.1.1/wromo-assets-injector-sheet.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.1.2/wromo-assets-injector-sheet.js"></script>
 </head>
 <body>
 
@@ -82,6 +82,16 @@ Our models do not need packages that can change or the next day bring errors, an
 ````
 
 * ## For BODY BLOG WEBPAGE 
+SHEET MAPS:
+      Id: 0, // Column A
+      Title: 1, // Column B
+      Summary: 2, // Column C
+      Full_description: 3, // Column D
+      Source: 4, // Column E
+      Media_url: 5, // Column F
+      Date: 6, // Column G
+      Url_single_page: 7, // Column H      <!-- title-blog-exemple  -->
+      Author: 8, // Column I
 
 ````
 <div
@@ -93,24 +103,43 @@ Our models do not need packages that can change or the next day bring errors, an
 </div>
 
 ````
+
+* ## For BODY BLOG - SINGLE BLOG PAGE
+Important: the single page is located in the /single/ folder and enter the following in index.html
+````
+<section style="padding: 60px 0; background-color: #f8f9fa; min-height: 80vh;">
+  <div class="container">
+    
+    <div
+      data-blog-single
+      data-blog-sheet-id="1StUxxxxxxxxxxx-IUaB8l_uPPhs, 1AUsTBP9VfYBosxxxxxxxxxxxxxTrRucpC29LkU, 13KqImbDxxxxxxxxxxxxxxx-GXZzxrm-sIICC5ZE"
+      data-blog-sheet-name="Date_Publice, Date_Private"
+      data-blog-map="blog"
+    </div>
+
+  </div>
+</section>
+
+````
+
 * ## For END BODY SCRIPT JS + MAPS = PRODUCTS
 
 ````
-<script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.1.1/maps.js"></script> // <!-- maps.js for Shop / mapsblog.js blog -->
-<script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.1.1/js/sheet-search-wromo.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.1.2/maps.js"></script> // <!-- maps.js for Shop / mapsblog.js blog -->
+<script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.1.2/js/sheet-search-wromo.js" defer></script>
 
 </body>
 ````
 * ## For END BODY SCRIPT JS + MAPS = BLOG
 
 ````
- <script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.1.1/mapsblog.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.1.1/wromo-blog-widgets.js" defer></script>
+ <script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.1.2/mapsblog.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/search-dinamic-sheet-wromo@1.1.2/wromo-blog-widgets.js" defer></script>
 
 </body>
 ````
-![v1.1.1 Shop + Search](/img/image-9.png)
-![v1.1.1 Blog + Search + Single page](/img/image-8.png)
+![v1.1.2 Shop + Search](/img/image-9.png)
+![v1.1.2 Blog + Search + Single page](/img/image-8.png)
 
 
 

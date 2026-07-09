@@ -178,7 +178,7 @@
         var currentBlogs = blogs.slice(start, start + limit);
 
         grid.innerHTML = currentBlogs.map(function(blog) {
-          var singleLink = '?article=' + encodeURIComponent(blog.urlSlug || blog.id);
+          var singleLink = 'single/?article=' + encodeURIComponent(blog.urlSlug || blog.id);
           return (
             '<div class="col-sm-6 col-xxl-4">' +
             '  <div class="blog-box sticky-blog-box">' +
